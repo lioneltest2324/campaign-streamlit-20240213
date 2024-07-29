@@ -444,13 +444,13 @@ default_end_date = datetime.today() - timedelta(days=7)
 with st.sidebar:
     selected_range = st.date_input(
         "自选日期范围",
-        [default_start_date, default_end_date],
+        [min_date, max_date],
         min_value=min_date,
         max_value=max_date
     )
     compare_selected_range = st.date_input(
         "对比数据日期范围",
-        [default_start_date, default_end_date],
+        [min_date, max_date],
         min_value=min_date,
         max_value=max_date
     )
